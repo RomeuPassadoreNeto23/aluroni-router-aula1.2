@@ -9,9 +9,10 @@ export default function PaginaPadrao() {
                     A casa do código e da massa
                 </div>
             </header>
-            <div>
-                < Outlet/>
-            </div>
+            <main>
+                {/* Renderiza rotas aninhadas */}
+                <Outlet />
+            </main>
         </>
     );
-} 
+}
