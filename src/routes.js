@@ -4,6 +4,8 @@ import Cardapio from 'pages/Cardapio';
 import Inicio from 'pages/Inicio';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sobre from 'pages/Sobre';
+import Footer from 'components/Footer';
+import NotFound from 'pages/NotFound';
 
 export default function AppRouter() {
     return (
@@ -20,8 +22,12 @@ export default function AppRouter() {
                         <Route path="cardapio" element={<Cardapio />} />
                         {/* Rota para sobre também dentro do layout */}
                         <Route path="sobre" element={<Sobre />} />
+                        {/* Rota para Página não Emcontrado também dentro do layout */}
+
                     </Route>
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
+                <Footer />
             </Router>
         </main>
     );
