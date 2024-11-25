@@ -9,7 +9,7 @@ import NotFound from 'pages/NotFound';
 
 export default function AppRouter() {
     return (
-        <main>
+        <main className='container'>
             <Router>
                 {/* Menu sempre aparece */}
                 <Menu />
@@ -23,7 +23,6 @@ export default function AppRouter() {
                         {/* Rota para sobre também dentro do layout */}
                         <Route path="sobre" element={<Sobre />} />
                         {/* Rota para Página não Emcontrado também dentro do layout */}
-
                     </Route>
                     <Route path="*" element={<NotFound />} />
                 </Routes>
