@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sobre from 'pages/Sobre';
 import Footer from 'components/Footer';
 import NotFound from 'pages/NotFound';
+import Prato from 'pages/Prato';
 
 export default function AppRouter() {
     return (
@@ -22,8 +23,9 @@ export default function AppRouter() {
                         <Route path="cardapio" element={<Cardapio />} />
                         {/* Rota para sobre também dentro do layout */}
                         <Route path="sobre" element={<Sobre />} />
-                        {/* Rota para Página não Emcontrado também dentro do layout */}
+                        <Route path='prato/:i' element={<Prato />} />
                     </Route>
+                    {/* Rota para Página não Emcontrado também dentro do layout */}
                     <Route path="*" element={<NotFound />} />
                 </Routes>
                 <Footer />
