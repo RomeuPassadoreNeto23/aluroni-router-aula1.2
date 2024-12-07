@@ -23,7 +23,7 @@ export default function AppRouter() {
                         <Route path="cardapio" element={<Cardapio />} />
                         {/* Rota para sobre também dentro do layout */}
                         <Route path="sobre" element={<Sobre />} />
-                        <Route path='prato/:i' element={<Prato />} />
+                        <Route path='prato/:id' element={<Prato />} />
                     </Route>
                     {/* Rota para Página não Emcontrado também dentro do layout */}
                     <Route path="*" element={<NotFound />} />
