@@ -13,6 +13,7 @@ export default function PaginaPadrao() {
             <div className={stylesTema.container}>
                 {/* Renderiza rotas aninhadas */}
                 <Outlet />
+              
             </div>
         </>
     );
