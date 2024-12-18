@@ -1,4 +1,15 @@
+// Define uma variável para o tamanho de tela de dispositivos móveis (largura máxima de 768px)
+// Usada para aplicar estilos responsivos para telas pequenas, como smartphones
 $mobile: 768px;
+
+// Define uma variável para o tamanho de tela de desktops extra pequenos (largura mínima de 980px)
+// Usada para aplicar estilos específicos para telas ligeiramente maiores que tablets
 $desktop_xsm: 980px;
+
+// Define uma variável para o tamanho de tela de desktops pequenos (largura mínima de 1080px)
+// Útil para ajustar o layout para a maioria dos notebooks e desktops pequenos
 $desktop_sm: 1080px;
+
+// Define uma variável para o tamanho de tela de desktops médios (largura mínima de 1280px)
+// Geralmente usada para telas maiores, como monitores de escritório
 $desktop_md: 1280px;

@@ -1,24 +1,32 @@
+// Importa o arquivo de variáveis, que contém definições de cores, espaçamentos e outros valores reutilizáveis
 @import "./variaveis";
+
+// Importa o arquivo de breakpoints, que contém as definições de tamanhos de tela para media queries
 @import "./breakpoints";
 
+// Estilo para o container principal da página
 .container {
-    padding: 50px $padding-horizontal;
+    padding: 50px $padding-horizontal; // Define o padding superior/inferior como 50px e horizontal conforme a variável padrão
 
+    // Estilo responsivo para telas menores que $desktop_xsm (980px)
     @media (max-width: $desktop_xsm) {
-        padding: 50px $padding-horizontal-mobile;
+        padding: 50px $padding-horizontal-mobile; // Reduz o padding horizontal para dispositivos móveis
     }
 
+    // Estilo responsivo para telas entre $desktop_xsm (980px) e $desktop_sm (1080px)
     @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
-        padding: 50px $padding-horizontal-sm;
+        padding: 50px $padding-horizontal-sm; // Ajusta o padding horizontal para telas pequenas
     }
 
+    // Estilo responsivo para telas entre $desktop_sm (1080px) e $desktop_md (1280px)
     @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
-        padding: 50px $padding-horizontal-md;
+        padding: 50px $padding-horizontal-md; // Ajusta o padding horizontal para telas médias
     }
 }
 
+// Estilo para o título
 .titulo {
-    color: $dark;
-    font-size: 3rem;
-    margin-bottom: 30px;
+    color: $dark; // Define a cor do texto como a variável $dark (geralmente usada para texto principal)
+    font-size: 3rem; // Define o tamanho da fonte como 3 rem (proporcional ao tamanho base da fonte)
+    margin-bottom: 30px; // Adiciona um espaçamento inferior ao título
 }

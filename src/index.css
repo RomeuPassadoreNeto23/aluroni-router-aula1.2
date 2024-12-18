@@ -1,17 +1,23 @@
+/* Importa a fonte "Italiana" do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+/* Importa a fonte "Josefin Sans" do Google Fonts, com pesos 400 (normal) e 700 (negrito) */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
-
+/* Define a cor de fundo global da página */
 body {
-  background-color: #f6f6f6;
+  background-color: #f6f6f6; /* Um tom de cinza claro para o fundo */
 }
 
+/* Estilo padrão para todos os elementos */
 * {
-  box-sizing: border-box;
-  font-family: 'Italiana', serif;
+  box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho total dos elementos */
+  font-family: 'Italiana', serif; /* Define a fonte padrão como "Italiana" */
 }
+
+/* Estilo para o elemento principal dentro do #root (container principal do React) */
 #root > main.container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: flex; /* Ativa o Flexbox para organizar os elementos filhos */
+  flex-direction: column; /* Organiza os filhos em uma coluna (um abaixo do outro) */
+  min-height: 100vh; /* Garante que o container ocupe no mínimo a altura total da janela */
 }

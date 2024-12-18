@@ -1,13 +1,20 @@
-$padding-horizontal-mobile: 100px;
-$padding-horizontal-sm: 150px;
-$padding-horizontal-md: 200px;
-$padding-horizontal: 250px;
-$dark: #242536;
-$dark-grey: #92929d;
-$darkest-grey: #70707b;
-$grey: #e4e4e4;
-$black: #4c4d5e;
-$light-grey: #f6f6f6;
-$blue: #282b57;
-$red: #d73b3b;
-$red-dark: #c62a2a;
+// Variáveis de espaçamento horizontal (padding) para diferentes tamanhos de tela
+$padding-horizontal-mobile: 100px; // Padding horizontal padrão para dispositivos móveis
+$padding-horizontal-sm: 150px; // Padding horizontal para telas pequenas (small screens)
+$padding-horizontal-md: 200px; // Padding horizontal para telas médias (medium screens)
+$padding-horizontal: 250px; // Padding horizontal padrão para telas maiores (large screens)
+
+// Variáveis de cores escuras para o tema
+$dark: #242536; // Cor de fundo ou elementos principais escuros
+$dark-grey: #92929d; // Cinza escuro usado para texto secundário ou detalhes
+$darkest-grey: #70707b; // Cinza ainda mais escuro, para bordas ou destaques sutis
+$grey: #e4e4e4; // Cinza claro usado para fundos ou divisores suaves
+$black: #4c4d5e; // Preto suave usado para textos principais ou elementos destacados
+
+// Variáveis de cores claras para o tema
+$light-grey: #f6f6f6; // Cinza muito claro para fundos ou áreas neutras
+
+// Variáveis de cores temáticas adicionais
+$blue: #282b57; // Azul usado como cor de destaque, links ou botões
+$red: #d73b3b; // Vermelho para alertas ou mensagens de erro
+$red-dark: #c62a2a; // Vermelho mais escuro usado em estados de foco ou destaque
