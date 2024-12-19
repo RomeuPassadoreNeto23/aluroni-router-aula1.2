@@ -1,31 +1,34 @@
-@import "styles/variaveis";
-@import "styles/breakpoints";
+@import "styles/variaveis"; // Importa o arquivo de variáveis globais, como cores, tamanhos e outras configurações que são reutilizadas em todo o projeto.
+@import "styles/breakpoints"; // Importa os breakpoints definidos para tornar o layout responsivo, ajustando-se a diferentes tamanhos de tela.
 
 .header {
-    align-items: center;
-    background-image: url("../../assets/cardapio/header.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    height: 300px;
-    padding: 0px $padding-horizontal;
+    align-items: center; // Alinha os itens dentro do header no centro (no eixo transversal).
+    background-image: url("../../assets/cardapio/header.png"); // Define a imagem de fundo do header, apontando para a localização da imagem.
+    background-size: cover; // Faz com que a imagem de fundo cubra todo o espaço disponível, mantendo a proporção.
+    background-repeat: no-repeat; // Evita que a imagem de fundo se repita caso o espaço disponível seja maior que a imagem.
+    display: flex; // Usa flexbox para dispor os itens dentro do header.
+    height: 300px; // Define a altura fixa do header.
+    padding: 0px $padding-horizontal; // Aplica padding horizontal (esquerda e direita), usando a variável $padding-horizontal.
 
+    // Estilos responsivos para dispositivos com largura máxima de $desktop_xsm.
     @media (max-width: $desktop_xsm) {
-        padding: 0px $padding-horizontal-mobile;
+        padding: 0px $padding-horizontal-mobile; // Altera o padding horizontal quando a tela é pequena (como celulares).
     }
 
+    // Estilos para telas com largura entre $desktop_xsm e $desktop_sm.
     @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
-        padding: 0px $padding-horizontal-sm;
+        padding: 0px $padding-horizontal-sm; // Ajusta o padding para telas de tamanho médio.
     }
 
+    // Estilos para telas com largura entre $desktop_sm e $desktop_md.
     @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
-        padding: 0px $padding-horizontal-md;
+        padding: 0px $padding-horizontal-md; // Altera o padding para telas maiores.
     }
 
     &__text {
-        color: white;
-        font-size: 5rem;
-        min-width: 400px;
-        width: 40%;
+        color: white; // Define a cor do texto como branco.
+        font-size: 5rem; // Define o tamanho da fonte como 5rem (grande, adequado para o cabeçalho).
+        min-width: 400px; // Define uma largura mínima para o texto.
+        width: 40%; // Define a largura do texto como 40% do contêiner pai, o que permite uma boa centralização e leitura.
     }
 }

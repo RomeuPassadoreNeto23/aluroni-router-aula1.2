@@ -1,61 +1,69 @@
-@import "styles/variaveis";
-@import "styles/breakpoints";
+@import "styles/variaveis"; // Importa variáveis para cores, tamanhos, etc.
+@import "styles/breakpoints"; // Importa os breakpoints para utilização nas media queries
 
+// Estilos principais para o item do cardápio
 .item {
-  align-items: center;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  transition: .2s ease-in;
-  width: 90%;
+  align-items: center; // Centraliza o conteúdo horizontalmente
+  border-radius: 10px; // Aplica bordas arredondadas no item
+  cursor: pointer; // Muda o cursor para indicar que é clicável
+  display: flex; // Usa flexbox para o layout
+  flex-wrap: wrap; // Permite que os filhos se quebrem em múltiplas linhas
+  padding: 20px; // Espaçamento interno ao redor do conteúdo
+  transition: .2s ease-in; // Transição suave para mudanças no estilo
+  width: 90%; // Define a largura do item como 90% da largura do contêiner pai
 
+  // Efeito de hover, alterando o fundo quando o item é passado com o mouse
   &:hover {
-    background-color: $grey;
+    background-color: $grey; // Muda a cor de fundo para a variável $grey
   }
 
+  // Estilos para a imagem dentro do item
   &__imagem {
-    min-width: 240px;
+    min-width: 240px; // Define a largura mínima da imagem
 
+    // Quando a tela é menor que $desktop_xsm, a imagem ocupa 100% da largura
     @media (max-width: $desktop_xsm) {
-      width: 100%;
+      width: 100%; 
     }
 
+    // Estilo da imagem dentro do contêiner
     img {
-      border-radius: 8px;
-      width: 100%;
+      border-radius: 8px; // Bordas arredondadas na imagem
+      width: 100%; // Imagem ocupa 100% do contêiner
     }
   }
 
+  // Estilos para a descrição do item
   &__descricao {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 20px;
+    display: flex; // Usa flexbox para o layout interno da descrição
+    flex: 1; // Faz com que a descrição ocupe todo o espaço disponível
+    flex-direction: column; // Organiza os filhos em uma coluna
+    flex-wrap: wrap; // Permite que os filhos quebrem de linha quando necessário
+    justify-content: space-around; // Espalha os elementos dentro do contêiner de forma igual
+    margin: 0 20px; // Define a margem horizontal
 
+    // Quando a tela é menor que $desktop_xsm, a direção dos elementos muda para linha
     @media (max-width: $desktop_xsm) {
-      flex-direction: row;
-      margin-top: 20px;
-      padding: 0;
+      flex-direction: row; // Alinha a descrição na horizontal
+      margin-top: 20px; // Adiciona margem superior
+      padding: 0; // Remove o padding
     }
   }
 
+  // Estilos para o título e descrição dentro do item
   &__titulo {
     h2 {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 20px;
+      font-size: 2rem; // Define o tamanho da fonte do título
+      font-weight: bold; // Deixa o título em negrito
+      margin-bottom: 20px; // Espaço inferior entre o título e o próximo elemento
     }
 
     p {
-      color: $dark-grey;
-      font-size: 1.3rem;
-      font-weight: 600;
-      max-width: 600px;
-      margin-bottom: 20px;
+      color: $dark-grey; // Define a cor do texto para cinza escuro
+      font-size: 1.3rem; // Define o tamanho da fonte da descrição
+      font-weight: 600; // Define o peso da fonte como seminegrito
+      max-width: 600px; // Limita a largura máxima da descrição
+      margin-bottom: 20px; // Espaço inferior entre o texto e o próximo elemento
     }
   }
 }

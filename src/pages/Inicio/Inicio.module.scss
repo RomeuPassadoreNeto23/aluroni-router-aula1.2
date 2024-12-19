@@ -1,61 +1,72 @@
-@import 'styles/variaveis';
+@import 'styles/variaveis'; // Importa as variáveis de estilo (cores, tamanhos, etc.)
 
+/* Estilo para a seção de pratos recomendados */
 .recomendados {
-  border-radius: 2px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
+  border-radius: 2px; // Bordas arredondadas para a seção de recomendações
+  display: flex; // Usa flexbox para organizar os itens
+  flex-wrap: wrap; // Permite que os itens "quebrem" para a linha seguinte, caso não caibam na mesma linha
+  gap: 30px; // Espaçamento entre os itens
+  justify-content: space-between; // Distribui os itens com o maior espaço possível entre eles
 }
+
+/* Estilo para cada item recomendado */
 .recomendado {
+  
+  /* Estilo para a imagem do prato */
   &__imagem {
-    width: 300px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    width: 300px; // Define a largura da imagem
+    margin-bottom: 10px; // Espaçamento inferior
+    margin-top: 10px; // Espaçamento superior
     img {
-      border-radius: 8px;
-      width: 100%;
+      border-radius: 8px; // Bordas arredondadas nas imagens
+      width: 100%; // Faz com que a imagem ocupe toda a largura do contêiner
     }
   }
+
+  /* Estilo para o botão "Ver mais" */
   &__botao {
-    background-color: $red;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 10px 0;
-    transition: .2s ease;
-    width: 100%;
+    background-color: $red; // Cor de fundo vermelha
+    border: none; // Remove borda
+    border-radius: 5px; // Bordas arredondadas para o botão
+    color: white; // Cor do texto branco
+    cursor: pointer; // Muda o cursor para uma mãozinha quando o usuário passa sobre o botão
+    font-size: 1.2rem; // Tamanho da fonte
+    font-weight: bold; // Deixa o texto em negrito
+    padding: 10px 0; // Define o espaçamento interno (vertical)
+    transition: .2s ease; // Animação suave de transição para efeitos como hover
+    width: 100%; // Faz o botão ocupar toda a largura disponível do contêiner
     &:hover {
-      background-color: $red-dark;
+      background-color: $red-dark; // Muda a cor do fundo para uma versão mais escura do vermelho quando o botão é "hovered"
     }
   }
 }
+
+/* Estilos para a seção "Nossa Casa" */
 .nossaCasa {
-  margin-bottom: 100px;
-  position: relative;
-  width: 100%;
+  margin-bottom: 100px; // Espaçamento inferior da seção
+  position: relative; // Necessário para posicionamento absoluto do endereço
+  width: 100%; // Faz com que a imagem ocupe toda a largura disponível
   img {
-    border-radius: 5px;
-    width: 100%;
+    border-radius: 5px; // Bordas arredondadas nas imagens
+    width: 100%; // A imagem ocupa toda a largura do contêiner
   }
+
+  /* Estilo para o contêiner do endereço */
   &__endereco {
-    align-items: center;
-    background-color: $dark;
-    border-radius: 5px;
-    bottom: -45px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    height: 100px;
-    justify-content: center;
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    width: 200px;
+    align-items: center; // Alinha os itens ao centro
+    background-color: $dark; // Cor de fundo escura
+    border-radius: 5px; // Bordas arredondadas
+    bottom: -45px; // Posiciona o endereço 45px abaixo da posição original
+    color: white; // Cor do texto branco
+    display: flex; // Usa flexbox para organizar os itens
+    flex-direction: column; // Organiza os itens verticalmente
+    font-weight: bold; // Texto em negrito
+    height: 100px; // Altura do contêiner do endereço
+    justify-content: center; // Alinha o conteúdo verticalmente no centro
+    position: absolute; // Coloca o endereço fora do fluxo normal do layout
+    margin: 0 auto; // Centraliza o endereço horizontalmente
+    left: 0; // Define a posição do lado esquerdo
+    right: 0; // Define a posição do lado direito
+    width: 200px; // Largura fixa para o contêiner do endereço
   }
 }

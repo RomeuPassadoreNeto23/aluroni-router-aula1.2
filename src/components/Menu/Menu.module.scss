@@ -1,41 +1,41 @@
-@import '../../styles/variaveis';
-@import '../../styles/breakpoints';
+@import '../../styles/variaveis'; // Importa o arquivo de variáveis para utilizar valores como cores, espaçamentos, etc.
+@import '../../styles/breakpoints'; // Importa os breakpoints para responsividade
 
 .menu {
-    display: flex;
-    padding: 20px $padding-horizontal;
+    display: flex; // Define o container do menu como um flexbox
+    padding: 20px $padding-horizontal; // Aplica um espaçamento de 20px nas laterais, com a variável de padding horizontal
 
     @media (max-width: $desktop_xsm) {
-        padding: 20px $padding-horizontal-mobile;
+        padding: 20px $padding-horizontal-mobile; // Para telas pequenas, ajusta o padding com o valor da variável de mobile
     }
 
     @media (min-width: $desktop_sm) {
-        padding: 20px $padding-horizontal-sm;
+        padding: 20px $padding-horizontal-sm; // Para telas médias, ajusta o padding para a versão de dispositivos pequenos
     }
 
-    @media (min-width: $desktop_sm) and (mas-width: $desktop_md) {
-        padding: 20px $padding-horizontal-md;
+    @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+        padding: 20px $padding-horizontal-md; // Para telas médias, ajusta o padding para a versão de dispositivos maiores
     }
 
     &__list {
-        align-items: center;
-        display: flex;
+        align-items: center; // Centraliza os itens no eixo transversal
+        display: flex; // Define a lista de itens como um flexbox para alinhamento em linha
     }
 
     &__link {
-        list-style-type: none;
-        padding: 0 20px;
+        list-style-type: none; // Remove os marcadores de lista padrão (bullet points)
+        padding: 0 20px; // Adiciona espaçamento lateral entre os links
 
         a {
-            color: $dark;
-            cursor: pointer;
-            font-size: 24px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: .2s ease;
+            color: $dark; // Define a cor do texto para um tom escuro (provavelmente de uma variável)
+            cursor: pointer; // Altera o cursor para pointer ao passar por cima do link
+            font-size: 24px; // Define o tamanho da fonte dos links
+            font-weight: 600; // Define a espessura da fonte (um pouco mais grossa)
+            text-decoration: none; // Remove o sublinhado dos links
+            transition: .2s ease; // Adiciona uma transição suave de 0.2s para efeitos de hover
 
             &:hover {
-                color: $dark-grey;
+                color: $dark-grey; // Quando o link é hoverizado, a cor muda para um tom mais claro
             }
         }
     }

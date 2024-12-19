@@ -1,71 +1,76 @@
-@import 'styles/variaveis';
-@import 'styles/breakpoints';
+@import 'styles/variaveis'; // Importa as variáveis definidas no arquivo 'variaveis.scss', como cores e outros valores reutilizáveis
+@import 'styles/breakpoints'; // Importa as quebras de linha definidas em 'breakpoints.scss' para adaptar o layout em diferentes tamanhos de tela
 
-$massas: #d73b3b;
-$carnes: #30201e;
-$combos: #e6c864;
-$veganos: #80aa40;
+// Definição de cores para categorias específicas de pratos
+$massas: #d73b3b; // Cor para pratos de massas (vermelho)
+$carnes: #30201e; // Cor para pratos de carnes (marrom escuro)
+$combos: #e6c864; // Cor para pratos de combos (amarelo claro)
+$veganos: #80aa40; // Cor para pratos veganos (verde claro)
 
 .tags {
+    // Container principal das tags, com layout flexível
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    max-width: 700px;
+    flex-wrap: wrap; // Permite que as tags quebrem para a próxima linha quando necessário
+    justify-content: space-between; // Distribui o espaço igualmente entre as tags
+    align-items: center; // Alinha as tags verticalmente ao centro
+    margin-bottom: 20px; // Espaçamento inferior
+    max-width: 700px; // Define a largura máxima do container para 700px
 
+    // Responsividade: Ajusta o alinhamento das tags para telas pequenas
     @media (max-width: $desktop_xsm) {
-        justify-content: flex-end;
+        justify-content: flex-end; // Alinha as tags à direita em telas pequenas
     }
 
     @media (max-width: $mobile) {
-        justify-content: flex-start;
+        justify-content: flex-start; // Alinha as tags à esquerda em telas muito pequenas (como dispositivos móveis)
     }
 
     div {
-        margin: 10px;
+        margin: 10px; // Espaçamento entre as tags dentro do container
     }
 
     &__tipo {
-        align-items: center;
-        border-radius: 2px;
+        // Estilos comuns para as tags de tipo de prato (massas, carnes, combos, veganos)
+        align-items: center; // Alinha verticalmente o conteúdo das tags
+        border-radius: 2px; // Arredonda ligeiramente os cantos
         display: flex;
-        font-weight: bold;
-        height: 40px;
-        justify-content: center;
-        padding: 10px 30px;
+        font-weight: bold; // Deixa o texto em negrito
+        height: 40px; // Define a altura das tags
+        justify-content: center; // Centraliza o conteúdo horizontalmente
+        padding: 10px 30px; // Adiciona espaço interno nas laterais
 
         &__massas {
-            background-color: $massas;
-            color: white;
+            background-color: $massas; // Aplica a cor de fundo para pratos de massas
+            color: white; // Define a cor do texto como branco
         }
 
         &__carnes {
-            background-color: $carnes;
-            color: white;
+            background-color: $carnes; // Aplica a cor de fundo para pratos de carnes
+            color: white; // Define a cor do texto como branco
         }
 
         &__combos {
-            background-color: $combos;
+            background-color: $combos; // Aplica a cor de fundo para pratos de combos
         }
 
         &__veganos {
-            background-color: $veganos;
+            background-color: $veganos; // Aplica a cor de fundo para pratos veganos
         }
     }
 
+    // Estilos comuns para as tags de porção, quantidade de pessoas e preço
     &__porcao,
     &__qtdpessoas,
     &__valor {
-        align-items: center;
-        display: flex;
-        font-size: 1.25rem;
-        font-weight: bold;
-        justify-content: center;
+        align-items: center; // Alinha verticalmente o conteúdo das tags
+        display: flex; // Usa o modelo de layout flexível
+        font-size: 1.25rem; // Define o tamanho da fonte para um valor médio
+        font-weight: bold; // Deixa o texto em negrito
+        justify-content: center; // Centraliza o conteúdo horizontalmente
     }
 
     &__valor {
-        color: $red;
-        font-size: 1.7rem;
+        color: $red; // Aplica a cor vermelha definida nas variáveis
+        font-size: 1.7rem; // Aumenta o tamanho da fonte para o valor do preço
     }
 }

@@ -1,27 +1,30 @@
-@import "styles/variaveis";
+@import "styles/variaveis"; // Importa as variáveis definidas em "styles/variaveis" (como cores, espaçamentos, etc.)
 
 .filtros {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin: 20px 0;
-  &__filtro {
-    align-items: center;
-    background-color: $grey;
-    border: none;
-    border-radius: 4px;
-    display: flex;
-    font-size: 1.25rem;
-    font-weight: bold;
-    height: 40px;
-    justify-content: center;
-    width: 150px;
-    &--ativo {
-      background-color: $blue;
-      color: white;
+  display: flex; // Utiliza o modelo de layout flexbox para distribuir os filtros
+  gap: 24px; // Define o espaçamento entre os elementos de filtro
+  flex-wrap: wrap; // Permite que os filtros se movam para uma nova linha quando necessário
+  margin: 20px 0; // Define uma margem superior e inferior para o container dos filtros
+
+  &__filtro { // Estilos para os botões de filtro
+    align-items: center; // Alinha os itens dentro do botão de filtro no centro verticalmente
+    background-color: $grey; // Cor de fundo inicial do botão de filtro
+    border: none; // Remove a borda padrão
+    border-radius: 4px; // Adiciona bordas arredondadas ao botão de filtro
+    display: flex; // Utiliza o modelo flexbox para os itens dentro do botão de filtro
+    font-size: 1.25rem; // Tamanho da fonte do texto no botão de filtro
+    font-weight: bold; // Deixa o texto em negrito
+    height: 40px; // Altura do botão de filtro
+    justify-content: center; // Alinha o conteúdo (texto) no centro horizontalmente
+    width: 150px; // Largura fixa para os botões de filtro
+
+    &--ativo { // Estilos para quando o filtro está ativo (selecionado)
+      background-color: $blue; // Cor de fundo azul para indicar que o filtro está ativo
+      color: white; // Muda a cor do texto para branco quando o filtro está ativo
     }
-    &:hover {
-      cursor: pointer;
+
+    &:hover { // Estilos ao passar o mouse sobre o botão de filtro
+      cursor: pointer; // Muda o cursor para indicar que o botão é clicável
     }
   }
 }

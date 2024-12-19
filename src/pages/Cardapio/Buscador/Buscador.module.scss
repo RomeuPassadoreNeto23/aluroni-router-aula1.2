@@ -1,28 +1,32 @@
-@import "styles/variaveis";
-@import "styles/breakpoints";
+@import "styles/variaveis"; // Importa variáveis definidas globalmente (como cores, fontes, etc.)
+@import "styles/breakpoints"; // Importa os pontos de quebra (breakpoints) para responsividade
 
 .buscador {
-  align-items: center;
-  background-color: $grey;
-  border-radius: 5px;
-  display: flex;
-  gap: 18px;
-  height: 42px;
-  justify-content: space-between;
-  padding: 0 15px;
-  width: 400px;
+  align-items: center; // Alinha os itens dentro do container verticalmente no centro
+  background-color: $grey; // Define a cor de fundo para o buscador utilizando a variável $grey
+  border-radius: 5px; // Define um raio de borda de 5px, deixando as bordas arredondadas
+  display: flex; // Define o container como um flexbox, para controle fácil do layout
+  gap: 18px; // Define um espaço de 18px entre os itens dentro do flexbox
+  height: 42px; // Define uma altura fixa para o componente
+  justify-content: space-between; // Distribui o conteúdo de forma que haja espaço entre os itens
+  padding: 0 15px; // Define um padding de 0px acima/abaixo e 15px nas laterais
+  width: 400px; // Define uma largura fixa de 400px para o campo de busca
+
+  // Responsividade para dispositivos móveis
   @media (max-width: $mobile) {
-    width: 100%;
+    width: 100%; // Para telas pequenas, faz com que a largura ocupe 100% do espaço disponível
   }
+
   input {
-    background-color: $grey;
-    border: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    outline: none;
-    width: 100%;
+    background-color: $grey; // Define a cor de fundo do input como a variável $grey
+    border: none; // Remove a borda padrão do input
+    font-size: 1.5rem; // Define o tamanho da fonte como 1.5rem (tamanho relativamente maior)
+    font-weight: bold; // Define a fonte como negrito
+    outline: none; // Remove o contorno do input quando o campo é focado
+    width: 100%; // Faz o input ocupar 100% da largura disponível dentro do buscador
+
     &::placeholder {
-      color: #4c4d5e;
+      color: #4c4d5e; // Define a cor do texto do placeholder (texto de exemplo) dentro do input
     }
   }
 }

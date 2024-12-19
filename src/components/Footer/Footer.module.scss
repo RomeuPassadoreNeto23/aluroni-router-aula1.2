@@ -1,17 +1,22 @@
-@import "styles/variaveis";
-@import "styles/breakpoints";
-.footer {
-  background-color: $red;
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px $padding-horizontal;
-  @media (max-width: $desktop_xsm) {
-  padding: 10px $padding-horizontal-mobile;
+@import "styles/variaveis"; // Importa o arquivo de variáveis, permitindo o uso de variáveis definidas, como $red e $padding-horizontal
+@import "styles/breakpoints"; // Importa o arquivo de breakpoints para controle responsivo de tamanhos de tela
+
+.footer { // Estilos específicos para o componente footer
+  background-color: $red; // Define a cor de fundo do rodapé com a variável $red
+  display: flex; // Define o layout flexível para o rodapé
+  justify-content: flex-end; // Alinha o conteúdo do rodapé à direita
+  padding: 10px $padding-horizontal; // Aplica um padding de 10px verticalmente e uma quantidade definida pela variável $padding-horizontal horizontalmente
+  
+  // Responsividade: Ajusta o padding conforme o tamanho da tela
+  @media (max-width: $desktop_xsm) { 
+    padding: 10px $padding-horizontal-mobile; // Para telas pequenas, usa a variável $padding-horizontal-mobile
   }
-  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
-  padding: 10px $padding-horizontal-sm;
+  
+  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) { 
+    padding: 10px $padding-horizontal-sm; // Para telas de tamanho médio, usa a variável $padding-horizontal-sm
   }
-  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
-  padding: 10px $padding-horizontal-md;
+  
+  @media (min-width: $desktop_sm) and (max-width: $desktop_md) { 
+    padding: 10px $padding-horizontal-md; // Para telas maiores, usa a variável $padding-horizontal-md
   }
 }

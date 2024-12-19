@@ -1,31 +1,36 @@
-@import "styles/variaveis";
-@import "styles/breakpoints";
+@import "styles/variaveis"; // Importa variáveis de estilo, como cores e espaçamentos
+@import "styles/breakpoints"; // Importa os breakpoints para aplicar estilos responsivos
 
+// Estilos para o menu principal
 .menu {
+  // Define o espaçamento interno (padding) para o menu com valores horizontais dinâmicos
   padding: 20px $padding-horizontal;
 
+  // Estilos aplicados para telas menores que o breakpoint $desktop_xsm
   @media (max-width: $desktop_xsm) {
     padding: 20px $padding-horizontal-mobile;
   }
 
+  // Estilos aplicados para telas entre $desktop_xsm e $desktop_sm
   @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
     padding: 20px $padding-horizontal-sm;
   }
 
+  // Estilos aplicados para telas entre $desktop_sm e $desktop_md
   @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
     padding: 20px $padding-horizontal-md;
   }
 }
 
-
-
+// Estilos específicos para o cardápio
 .cardapio {
+  // Modificador para a seção de filtros dentro do cardápio
   &__filtros {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    width: 100%;
+    align-items: center; // Centraliza os itens no eixo vertical
+    display: flex; // Usa layout flexível para organizar os elementos
+    flex-wrap: wrap; // Permite que os itens quebrem linha caso necessário
+    justify-content: space-between; // Distribui os itens igualmente com espaço entre eles
+    margin-bottom: 30px; // Adiciona margem inferior para espaçamento entre os elementos
+    width: 100%; // Garante que a largura do contêiner ocupe todo o espaço disponível
   }
 }

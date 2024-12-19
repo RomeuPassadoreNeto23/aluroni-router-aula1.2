@@ -1,21 +1,24 @@
-@import 'styles/variaveis';
+@import 'styles/variaveis'; // Importa as variáveis de estilo compartilhadas, como cores e tamanhos
+
 .container {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center; // Centraliza os itens no eixo vertical (eixo cruzado no flexbox)
+  display: flex; // Define o layout do contêiner como flexbox
+  flex: 1; // Permite que o contêiner ocupe todo o espaço disponível no eixo principal
+  flex-direction: column; // Alinha os itens em uma coluna
+  justify-content: center; // Centraliza os itens no eixo principal (horizontal)
 }
+
 .voltar {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
+  display: flex; // Define o layout como flexbox
+  justify-content: flex-start; // Alinha o conteúdo ao início do eixo principal (esquerda)
+  width: 100%; // Faz com que o contêiner ocupe toda a largura disponível
+
   button {
-    background-color: transparent;
-    border: none;
-    color: $red;
-    cursor: pointer;
-    font-size: 1.5rem;
-    font-weight: bold;
+    background-color: transparent; // Remove o fundo padrão do botão
+    border: none; // Remove as bordas padrão do botão
+    color: $red; // Define a cor do texto usando a variável de cor vermelha
+    cursor: pointer; // Indica que o botão é clicável
+    font-size: 1.5rem; // Define o tamanho da fonte
+    font-weight: bold; // Deixa o texto em negrito
   }
 }

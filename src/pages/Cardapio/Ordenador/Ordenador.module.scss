@@ -1,49 +1,60 @@
-@import "styles/variaveis";
+@import "styles/variaveis"; // Importa as variáveis definidas globalmente (como cores, tamanhos, etc.)
 
+// Estilos para o botão de "Ordenador" (componente de ordenação)
 .ordenador {
-  align-items: center;
-  background-color: $grey;
-  border: none;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  display: flex;
-  font-size: 1rem;
-  font-weight: bold;
-  height: 40px;
-  justify-content: space-between;
-  min-width: 240px;
-  padding: 0 40px;
-  position: relative;
+  align-items: center; // Alinha os itens verticalmente no centro
+  background-color: $grey; // Define a cor de fundo como cinza (variável global)
+  border: none; // Remove a borda
+  border-top-left-radius: 4px; // Arredonda o canto superior esquerdo
+  border-top-right-radius: 4px; // Arredonda o canto superior direito
+  display: flex; // Usa Flexbox para layout
+  font-size: 1rem; // Define o tamanho da fonte
+  font-weight: bold; // Define o peso da fonte como negrito
+  height: 40px; // Define a altura do botão
+  justify-content: space-between; // Espaça os itens dentro do botão (nome da opção e o ícone da seta)
+  min-width: 240px; // Define a largura mínima do botão
+  padding: 0 40px; // Define o preenchimento horizontal do botão
+  position: relative; // Define a posição como relativa para permitir posicionamento absoluto de seus filhos
+
+  // Estilos para o botão quando ele está ativo (uma opção foi selecionada)
   &--ativo {
-    background-color: $blue;
-    color: white;
+    background-color: $blue; // Altera a cor de fundo para azul quando ativo
+    color: white; // Altera a cor do texto para branco quando ativo
   }
+
+  // Estilos para a lista de opções de ordenação (menu suspenso)
   &__options {
-    display: none;
-    position: absolute;
-    left: 0;
-    flex-direction: column;
-    top: 100%;
-    width: 100%;
+    display: none; // Inicialmente, o menu está oculto
+    position: absolute; // Posiciona o menu de forma absoluta em relação ao seu elemento pai
+    left: 0; // Alinha o menu à esquerda
+    flex-direction: column; // Organiza as opções de forma vertical
+    top: 100%; // Posiciona o menu abaixo do botão
+    width: 100%; // Faz o menu ocupar toda a largura do botão
+
+    // Quando o menu está ativo (aberto), exibe as opções
     &--ativo {
-      display: flex;
+      display: flex; // Exibe o menu quando a classe 'ativo' é aplicada
     }
   }
+
+  // Estilos para cada opção dentro do menu
   &__option {
-    align-items: center;
-    background-color: $grey;
-    border-top: 2px solid $light-grey;
-    box-sizing: border-box;
-    color: $black;
-    display: flex;
-    height: 40px;
-    justify-content: center;
-    width: inherit;
-    &:hover,
-    &--ativo {
-      background-color: $blue;
-      cursor: pointer;
-      color: white;
+    align-items: center; // Alinha os itens (nome da opção) no centro
+    background-color: $grey; // Define o fundo da opção como cinza
+    border-top: 2px solid $light-grey; // Adiciona uma borda superior de 2px entre as opções
+    box-sizing: border-box; // Inclui o preenchimento e as bordas no cálculo do tamanho do elemento
+    color: $black; // Define a cor do texto como preta
+    display: flex; // Usa Flexbox para layout
+    height: 40px; // Define a altura de cada opção
+    justify-content: center; // Alinha o texto (nome da opção) no centro horizontalmente
+    width: inherit; // Faz a largura da opção herdar a largura do menu pai
+
+    // Estilos para a opção quando o usuário passa o mouse sobre ela (hover) ou quando está ativa
+    &:hover, // Quando o mouse passa sobre a opção
+    &--ativo { // Ou quando a opção está selecionada
+      background-color: $blue; // Muda a cor de fundo para azul
+      cursor: pointer; // Altera o cursor para uma mãozinha
+      color: white; // Muda a cor do texto para branco
     }
   }
 }

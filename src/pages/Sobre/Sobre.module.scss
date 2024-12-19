@@ -1,29 +1,34 @@
 .sobreNos {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 50px;
-    &__texto {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-align: justify;
-  p {
-        font-family: 'Josefin Sans', sans-serif;
+  display: flex; // Define o layout como flexbox para alinhar elementos lado a lado
+  gap: 20px; // Espaçamento entre os elementos do bloco "sobreNos"
+  margin-bottom: 50px; // Espaçamento inferior para separar do próximo conteúdo
+
+  &__texto {
+      display: flex; // Define o layout como flexbox
+      flex-direction: column; // Alinha os elementos verticalmente
+      justify-content: center; // Centraliza os elementos no eixo principal (vertical)
+      font-size: 1.5rem; // Define o tamanho da fonte para o texto dentro deste bloco
+      font-weight: bold; // Deixa o texto em negrito
+      text-align: justify; // Justifica o texto para alinhamento uniforme em ambos os lados
+
+      p {
+          font-family: 'Josefin Sans', sans-serif; // Define a fonte para os parágrafos
       }
-    }
   }
-  .imagens {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-    &__imagem {
-      width: 600px;
+}
+
+.imagens {
+  display: flex; // Define o layout como flexbox para alinhar imagens lado a lado
+  flex-wrap: wrap; // Permite que os elementos se reorganizem em múltiplas linhas, se necessário
+  gap: 20px; // Espaçamento entre as imagens
+  justify-content: space-between; // Distribui o espaço igualmente entre as imagens
+
+  &__imagem {
+      width: 600px; // Define a largura fixa de cada imagem
+
       img {
-        border-radius: 5px;
-        width: 100%;
+          border-radius: 5px; // Arredonda levemente os cantos da imagem
+          width: 100%; // Faz com que a imagem ocupe toda a largura do contêiner
       }
-    }
   }
+}
